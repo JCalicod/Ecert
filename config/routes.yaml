@@ -1,3 +1,26 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+home:
+  path:       /{_locale}
+  controller: App\Controller\HomeController::home
+  requirements:
+    _locale: en|fr
+
+create_kit:
+  path:       /create-kit/{_locale}
+  controller: App\Controller\KitController::create_kit
+  requirements:
+    _locale: en|fr
+
+login:
+  path:       /create-kit/login/{_locale}
+  controller: App\Controller\KitController::login
+  requirements:
+    _locale: en|fr
+
+test:
+  path:       /test/{_locale}
+  controller: App\Controller\HomeController::test
+  requirements:
+    _locale: en|fr

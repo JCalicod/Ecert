@@ -1,0 +1,43 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+    background-color: #A8D0E6;
+    color: #555;
+}
+
+.page {
+    background-color: #fff;
+    padding-left: 30px;
+    padding-right: 30px;
+    min-height: 100vh;
+}
+
+label {
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+}
+
+.btn-success {
+    background-color: #7BD6A5;
+    border-color: #7BD6A5;
+}
+
+.btn-success:hover {
+    background-color: #52B982;
+    border-color: #52B982;
+}
+
+.alert-danger {
+    background-color: #FEB6B8;
+    border-color: #FEB6B8;
+    color: #fff;
+}
+
+.flags {
+    position: absolute;
+    right: 5px;
+}
+
+.flags img {
+    width: 25px;
+}
