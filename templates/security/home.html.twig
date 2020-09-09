@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>{% trans %}Secure Space{% endtrans %}</h1>
+    <hr>
+    <div class="row">
+        <div class="col-lg-6">
+            <a href="{{ path('create_kit') }}">
+                <div class="icon-action">
+                    <div class="picture create-kit"></div>
+                    <div class="title">{% trans %}Kit Creation{% endtrans %}</div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-6">
+            <a href="#">
+                <div class="icon-action">
+                    <div class="picture download-ecert"></div>
+                    <div class="title">{% trans %}E-cert export{% endtrans %}</div>
+                </div>
+            </a>
+        </div>
+    </div>
+{% endblock %}

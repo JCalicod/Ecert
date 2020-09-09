@@ -3,5 +3,45 @@
 {% block body %}
     <h1>{% trans %}Kit Creation{% endtrans %}</h1>
     <hr>
-    {% trans %}Welcome{% endtrans %}
+    <div class="creation-form">
+        {{ form_start(form) }}
+        <label>{% trans %}CLI{% endtrans %}</label><br>
+        {{ form_widget(form.cli) }}<br>
+            <label>{% trans %}Pack choice{% endtrans %}</label><br>
+            {{ form_widget(form.pack) }}<br>
+{#            <label>{% trans %}Cards{% endtrans %}</label><br>#}
+{#            {{ form_widget(form.cards) }}#}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        var pack = $('#kit_pack');
+        pack.change(function() {
+            $.ajax({
+                url : "{{ path('get_pack_models') }}",
+                type: 'POST',
+                dataType: "JSON",
+                data : {
+                    pack_id: pack.val()
+                },
+                success: function(tests) {
+                    var form = $("form[name='kit']");
+
+                    $("#added").remove();
+
+                    form.append('<div id="added"></div>');
+
+                    $.each(tests, function (key, test) {
+                        $("#added").append('' +
+                            '<label> ' + test.test_result + ' </label><br>' +
+                            '<input type="text" id="kit_' + test.test_result + '" name="kit[' + test.test_result + ']" required="required"><br>' +
+                        '');
+                    });
+                }
+            });
+        });
+    </script>
 {% endblock %}

@@ -2,7 +2,8 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Axicon Ecert{% endblock %}</title>
+        <title>{% block title %}Axicon E-cert{% endblock %}</title>
+        <link rel="icon" type="image/png" href="{{ asset('img/icon.png') }}">
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
@@ -13,10 +14,18 @@
                 <div class="col-sm-3"></div>
                 <div class="col-sm-6 page">
                     <div class="flags">
-                        <a href="{{ path('language', {language: 'fr'}) }}"><img src="{{ asset('img/flag/fr.png') }}" alt="fr"></a>
-                        <a href="{{ path('language', {language: 'en'}) }}"><img src="{{ asset('img/flag/en.png') }}" alt="en"></a>
+                        {% set routeName = app.request.attributes.get("_route") %}
+                        {% set routeParams = app.request.attributes.get("_route_params") %}
+                        <ul>
+                            {% for locale in locales %}
+                                <a href="{{ path(routeName, routeParams|merge({"_locale": locale})) }}"><img src="{{ asset('img/flag/' ~ locale ~ '.png') }}" alt="{{ locale }}"></a>
+                            {% endfor %}
+                        </ul>
                     </div>
-                    <div class="content mt-5">
+                    <div class="home-link">
+                        <a href="{{ path('home') }}"><img class="" src="{{ asset('img/icon.png') }}" alt="icon"></a>
+                    </div>
+                    <div class="content">
                         {% block body %}
                         {% endblock %}
                     </div>
@@ -26,6 +35,7 @@
         </div>
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
         {% endblock %}
     </body>
 </html>

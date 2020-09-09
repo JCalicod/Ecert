@@ -29,9 +29,15 @@ class Card
      */
     private $tests;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Set::class, mappedBy="cards")
+     */
+    private $sets;
+
     public function __construct()
     {
         $this->tests = new ArrayCollection();
+        $this->sets = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -77,6 +83,34 @@ class Card
             if ($test->getCard() === $this) {
                 $test->setCard(null);
             }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Set[]
+     */
+    public function getSets(): Collection
+    {
+        return $this->sets;
+    }
+
+    public function addSet(Set $set): self
+    {
+        if (!$this->sets->contains($set)) {
+            $this->sets[] = $set;
+            $set->addCard($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSet(Set $set): self
+    {
+        if ($this->sets->contains($set)) {
+            $this->sets->removeElement($set);
+            $set->removeCard($this);
         }
 
         return $this;

@@ -5,11 +5,16 @@ body {
     color: #555;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 .page {
     background-color: #fff;
     padding-left: 30px;
     padding-right: 30px;
     min-height: 100vh;
+    padding-bottom: 50px;
 }
 
 label {
@@ -33,11 +38,82 @@ label {
     color: #fff;
 }
 
+.home-link {
+    position: absolute;
+    left: 30px;
+}
+
+.home-link img {
+    width: 100px;
+}
+
 .flags {
     position: absolute;
     right: 5px;
 }
 
 .flags img {
-    width: 25px;
+    width: 35px;
+}
+
+.content {
+    margin-top: 100px;
+}
+
+.icon-action {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.icon-action:hover {
+    border: 3px solid #A8D0E6;
+}
+
+.icon-action:hover .picture {
+    height: 294px;
+}
+
+.icon-action .picture {
+    width: 100%;
+    height: 300px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.icon-action .picture.create-kit {
+    background: url('../../public/img/action/add-kit.png');
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon-action .picture.download-ecert {
+    background: url('../../public/img/action/download-ecert.png');
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon-action .title {
+    font-size: 25px;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #A8D0E6;
+}
+
+.icon-action .title:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.creation-form label {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.creation-form select {
+    width: 220px;
 }
