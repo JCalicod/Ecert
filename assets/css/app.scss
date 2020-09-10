@@ -114,6 +114,11 @@ label {
     margin-bottom: 10px;
     font-size: 20px;
 }
-.creation-form select {
-    width: 220px;
+
+.creation-form #added input {
+    width: 100%;
+}
+
+.creation-form input[type="text"]:disabled {
+    cursor: not-allowed;
 }

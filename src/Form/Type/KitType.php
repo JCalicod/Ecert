@@ -9,19 +9,17 @@
 namespace App\Form\Type;
 
 use App\Entity\Card;
-use App\Entity\Kit;
-use App\Entity\Model;
 use App\Entity\Pack;
 use App\Entity\Set;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
 use Symfony\Component\Form\FormInterface;
-use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 class KitType extends AbstractType
@@ -39,7 +37,6 @@ class KitType extends AbstractType
     {
         $builder
             ->add('cli', TextType::class, [
-                'mapped' => false
             ])
             ->add('pack', EntityType::class, [
                 'class' => Pack::class,
@@ -48,8 +45,10 @@ class KitType extends AbstractType
                 },
                 'label' => 'Choix du jeu de cartes',
                 'placeholder' => $this->translator->trans('Select a pack')
-            ]);
+            ])
+        ;
 
+        $builder->addEventListener(FormEvents::PRE_SET_DATA, [$this, 'onPreSetData']);
         $builder->addEventListener(FormEvents::PRE_SUBMIT, [$this, 'onPreSubmit']);
     }
 
@@ -63,11 +62,23 @@ class KitType extends AbstractType
         $this->addElements($form, $pack);
     }
 
+    function onPreSetData(FormEvent $event)
+    {
+        $kit = $event->getData();
+        $form = $event->getForm();
+
+        $pack = null;
+        if ($kit) {
+            $pack = $kit->getPack() ? $kit->getPack() : null;
+        }
+
+        $this->addElements($form, null);
+    }
+
     protected function addElements(FormInterface $form, Pack $pack = null)
     {
         $form
             ->add('cli', TextType::class, [
-                'mapped' => false
             ])
             ->add('pack', EntityType::class, [
             'class' => Pack::class,
@@ -82,20 +93,22 @@ class KitType extends AbstractType
         if ($set = $this->em->getRepository(Set::class)->findOneBy(['pack' => $pack])) {
             $cards = $set->getCards();
         }
+
         foreach ($cards as $card) {
             foreach ($card->getTests() as $test) {
-                $form->add($test->getTestResult(), TextType::class, [
+                $form->add($test->getFieldName(), TextType::class, [
+                    'mapped' => false
                 ]);
             }
         }
+
+        if ($cards != []) {
+            $form->add('save', SubmitType::class, [
+                'label' => 'Valider',
+                'attr' => [
+                    'class' => 'btn btn-success mt-3'
+                ]
+            ]);
+        }
     }
-
-    public function configureOptions(OptionsResolver $resolver)
-    {
-        $resolver->setDefaults([
-            'data_class' => Kit::class
-        ]);
-    }
-
-
 }

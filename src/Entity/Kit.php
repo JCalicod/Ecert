@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\KitRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -47,6 +49,16 @@ class Kit
      * @ORM\JoinColumn(nullable=false)
      */
     private $pack;
+
+    /**
+     * @ORM\OneToMany(targetEntity=KitValue::class, mappedBy="kit")
+     */
+    private $kitValues;
+
+    public function __construct()
+    {
+        $this->kitValues = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -121,6 +133,37 @@ class Kit
     public function setPack(?Pack $pack): self
     {
         $this->pack = $pack;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|KitValue[]
+     */
+    public function getKitValues(): Collection
+    {
+        return $this->kitValues;
+    }
+
+    public function addKitValue(KitValue $kitValue): self
+    {
+        if (!$this->kitValues->contains($kitValue)) {
+            $this->kitValues[] = $kitValue;
+            $kitValue->setKit($this);
+        }
+
+        return $this;
+    }
+
+    public function removeKitValue(KitValue $kitValue): self
+    {
+        if ($this->kitValues->contains($kitValue)) {
+            $this->kitValues->removeElement($kitValue);
+            // set the owning side to null (unless already changed)
+            if ($kitValue->getKit() === $this) {
+                $kitValue->setKit(null);
+            }
+        }
 
         return $this;
     }

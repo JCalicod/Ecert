@@ -13,5 +13,3 @@ var $ = require('jquery');
 
 // Bootstrap
 require('bootstrap');
-
-

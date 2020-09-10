@@ -23,18 +23,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes/annotations.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes/annotations.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Command/CreateCardTestCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/CreateCardTestCommand.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/KitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/KitController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/TranslatorController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Card.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Card.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Kit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Kit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Test.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/Type/KitType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Type/KitType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/security/create_kit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/create_kit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/translations/messages.fr.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/translations/messages.fr.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/translations/messages.fr.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/translations/messages.fr.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,6 +160,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Atlas" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -182,7 +180,8 @@
       <workItem from="1599470457440" duration="14052000" />
       <workItem from="1599548663407" duration="608000" />
       <workItem from="1599552896552" duration="18931000" />
-      <workItem from="1599638418221" duration="17096000" />
+      <workItem from="1599638418221" duration="17372000" />
+      <workItem from="1599723475516" duration="16238000" />
     </task>
     <servers />
   </component>
@@ -224,23 +223,23 @@
       <screen x="0" y="26" width="1920" height="1054" />
     </state>
     <state x="693" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.26.1920.1054/1920.141.1920.1080@0.26.1920.1054" timestamp="1599660848703" />
-    <state x="100" y="126" width="1720" height="854" key="DiffContextDialog" timestamp="1599556443908">
+    <state x="100" y="126" width="1720" height="854" key="DiffContextDialog" timestamp="1599733375058">
       <screen x="0" y="26" width="1920" height="1054" />
     </state>
-    <state x="100" y="126" width="1720" height="854" key="DiffContextDialog/0.26.1920.1054/1920.141.1920.1080@0.26.1920.1054" timestamp="1599556443908" />
-    <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1599656310900">
+    <state x="100" y="126" width="1720" height="854" key="DiffContextDialog/0.26.1920.1054/1920.141.1920.1080@0.26.1920.1054" timestamp="1599733375058" />
+    <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1599748982447">
       <screen x="0" y="26" width="1920" height="1054" />
     </state>
-    <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl/0.26.1920.1054/1920.141.1920.1080@0.26.1920.1054" timestamp="1599656310900" />
-    <state x="630" y="279" width="713" height="555" key="NewPhpClassDialog" timestamp="1599658076553">
+    <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl/0.26.1920.1054/1920.141.1920.1080@0.26.1920.1054" timestamp="1599748982447" />
+    <state x="630" y="279" width="713" height="555" key="NewPhpClassDialog" timestamp="1599745817090">
       <screen x="0" y="26" width="1920" height="1054" />
     </state>
-    <state x="630" y="279" width="713" height="555" key="NewPhpClassDialog/0.26.1920.1054/1920.141.1920.1080@0.26.1920.1054" timestamp="1599658076553" />
+    <state x="630" y="279" width="713" height="555" key="NewPhpClassDialog/0.26.1920.1054/1920.141.1920.1080@0.26.1920.1054" timestamp="1599745817090" />
     <state x="2550" y="400" width="649" height="568" key="NewPhpClassDialog/0.26.1920.1054/1920.141.1920.1080@1920.141.1920.1080" timestamp="1599471529092" />
-    <state x="100" y="126" width="1720" height="854" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599557280186">
+    <state x="100" y="126" width="1720" height="854" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599733482175">
       <screen x="0" y="26" width="1920" height="1054" />
     </state>
-    <state x="100" y="126" width="1720" height="854" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.26.1920.1054/1920.141.1920.1080@0.26.1920.1054" timestamp="1599557280186" />
+    <state x="100" y="126" width="1720" height="854" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.26.1920.1054/1920.141.1920.1080@0.26.1920.1054" timestamp="1599733482175" />
     <state x="741" y="468" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599555349820">
       <screen x="0" y="26" width="1920" height="1054" />
     </state>
@@ -253,5 +252,16 @@
       <screen x="0" y="26" width="1920" height="1054" />
     </state>
     <state x="623" y="258" width="672" height="678" key="search.everywhere.popup/0.26.1920.1054/1920.141.1920.1080@0.26.1920.1054" timestamp="1599483148295" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Command/CreateCardTestCommand.php</url>
+          <line>3</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

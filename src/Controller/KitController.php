@@ -8,6 +8,7 @@ use App\Entity\Kit;
 use App\Entity\Pack;
 use App\Entity\Set;
 use App\Form\Type\KitType;
+use App\Service\KitService;
 use Doctrine\ORM\EntityManagerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -30,23 +31,40 @@ class KitController extends AbstractController
 {
     private $em;
     private $translator;
+    private $kitService;
 
-    public function __construct(EntityManagerInterface $em, TranslatorInterface $translator)
+    public function __construct(EntityManagerInterface $em, TranslatorInterface $translator, KitService $kitService)
     {
         $this->em = $em;
         $this->translator = $translator;
+        $this->kitService = $kitService;
     }
+
     /**
      * @Route("/", name="create_kit")
      * @IsGranted("ROLE_ADMIN")
      * @return Response
+     * @throws \Exception
      */
-    public function home()
+    public function home(Request $request)
     {
-        $kit = new Kit();
-        $form = $this->createForm(KitType::class, $kit);
+        $created = false;
+        $form = $this->createForm(KitType::class);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $data = $form->all();
+            $this->kitService->createKit($data);
+            if ($this->kitService->getError()) {
+                $this->addFlash('danger', $this->kitService->getError());
+            }
+            else {
+                $created = true;
+            }
+        }
         return $this->render('security/create_kit.html.twig', [
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            'created' => $created
         ]);
     }
 
@@ -71,7 +89,8 @@ class KitController extends AbstractController
                                 'measure' => $test->getMeasure(),
                                 'test_result' => $test->getTestResult(),
                                 'unit' => $test->getUnit(),
-                                'expected_result' => $test->getExpectedResult()
+                                'expected_result' => $test->getExpectedResult(),
+                                'field_name' => $test->getFieldName()
                             ];
                         }
                     }

@@ -3,14 +3,146 @@
 {% block body %}
     <h1>{% trans %}Kit Creation{% endtrans %}</h1>
     <hr>
-    <div class="creation-form">
+    <div class="creation-form" id="creation-form">
         {{ form_start(form) }}
         <label>{% trans %}CLI{% endtrans %}</label><br>
         {{ form_widget(form.cli) }}<br>
-            <label>{% trans %}Pack choice{% endtrans %}</label><br>
-            {{ form_widget(form.pack) }}<br>
-{#            <label>{% trans %}Cards{% endtrans %}</label><br>#}
-{#            {{ form_widget(form.cards) }}#}
+        <label>{% trans %}Pack choice{% endtrans %}</label><br>
+        {{ form_widget(form.pack) }}<br>
+        <div class="row">
+            {% if form.fail_quiet_area_1dm is defined %}
+                <div class="col-lg-4">
+                    <label>{% trans %}Fail quiet area 1DM{% endtrans %}</label><br>
+                    {{ form_widget(form.fail_quiet_area_1dm) }}<br>
+                </div>
+            {% endif %}
+
+            {% if form.pass_quiet_area_1dm is defined %}
+                <div class="col-lg-4">
+                    <label>{% trans %}Pass quiet area 1DM{% endtrans %}</label><br>
+                    {{ form_widget(form.pass_quiet_area_1dm) }}<br>
+                </div>
+            {% endif %}
+
+            {% if form.default_1dm is defined %}
+                <div class="col-lg-4">
+                    <label>{% trans %}Default 1DM{% endtrans %}</label><br>
+                    {{ form_widget(form.default_1dm) }}<br>
+                </div>
+            {% endif %}
+
+            {% if form.decodability_1dm is defined %}
+                <div class="col-lg-4">
+                    <label>{% trans %}Decodability 1DM{% endtrans %}</label><br>
+                    {{ form_widget(form.decodability_1dm) }}<br>
+                </div>
+            {% endif %}
+
+            {% if form.contrast_1dm is defined %}
+                <div class="col-lg-4">
+                    <label>{% trans %}Contrast 1DM{% endtrans %}</label><br>
+                    {{ form_widget(form.contrast_1dm) }}<br>
+                </div>
+            {% endif %}
+
+            {% if form.fail_quiet_area_1dl is defined %}
+                <div class="col-lg-4">
+                    <label>{% trans %}Fail quiet area 1DL{% endtrans %}</label><br>
+                    {{ form_widget(form.fail_quiet_area_1dl) }}<br>
+                </div>
+            {% endif %}
+
+            {% if form.pass_quiet_area_1dl is defined %}
+                <div class="col-lg-4">
+                    <label>{% trans %}Pass quiet area 1DL{% endtrans %}</label><br>
+                    {{ form_widget(form.pass_quiet_area_1dl) }}<br>
+                </div>
+            {% endif %}
+
+            {% if form.default_1dl is defined %}
+                <div class="col-lg-4">
+                    <label>{% trans %}Default 1DL{% endtrans %}</label><br>
+                    {{ form_widget(form.default_1dl) }}<br>
+                </div>
+            {% endif %}
+
+            {% if form.decodability_1dl is defined %}
+                <div class="col-lg-4">
+                    <label>{% trans %}Decodability 1DL{% endtrans %}</label><br>
+                    {{ form_widget(form.decodability_1dl) }}<br>
+                </div>
+            {% endif %}
+
+            {% if form.contrast_1dl is defined %}
+                <div class="col-lg-4">
+                    <label>{% trans %}Contrast 1DL{% endtrans %}</label><br>
+                    {{ form_widget(form.contrast_1dl) }}<br>
+                </div>
+            {% endif %}
+
+            {% if form.reset_pixel_size is defined %}
+                <div class="col-lg-4">
+                    <label>{% trans %}Reset pixel size{% endtrans %}</label><br>
+                    {{ form_widget(form.reset_pixel_size) }}<br>
+                </div>
+            {% endif %}
+
+            {% if form.xdim is defined %}
+                <div class="col-lg-4">
+                    <label>{% trans %}X - Dim{% endtrans %}</label><br>
+                    {{ form_widget(form.xdim) }}<br>
+                </div>
+            {% endif %}
+
+            {% if form.modulation is defined %}
+                <div class="col-lg-4">
+                    <label>{% trans %}Modulation{% endtrans %}</label><br>
+                    {{ form_widget(form.modulation) }}<br>
+                </div>
+            {% endif %}
+
+            {% if form.anu is defined %}
+                <div class="col-lg-4">
+                    <label>{% trans %}ANU{% endtrans %}</label><br>
+                    {{ form_widget(form.anu) }}<br>
+                </div>
+            {% endif %}
+
+            {% if form.gnu is defined %}
+                <div class="col-lg-4">
+                    <label>{% trans %}GNU{% endtrans %}</label><br>
+                    {{ form_widget(form.gnu) }}<br>
+                </div>
+            {% endif %}
+
+            {% if form.contrast_2dm is defined %}
+                <div class="col-lg-4">
+                    <label>{% trans %}Contrast 2DM{% endtrans %}</label><br>
+                    {{ form_widget(form.contrast_2dm) }}<br>
+                </div>
+            {% endif %}
+
+            {% if form.contrast_uniformity is defined %}
+                <div class="col-lg-4">
+                    <label>{% trans %}Contrast Uniformity{% endtrans %}</label><br>
+                    {{ form_widget(form.contrast_uniformity) }}<br>
+                </div>
+            {% endif %}
+
+            {% if form.uec is defined %}
+                <div class="col-lg-4">
+                    <label>{% trans %}UEC{% endtrans %}</label><br>
+                    {{ form_widget(form.uec) }}<br>
+                </div>
+            {% endif %}
+
+            {% if form.fpd is defined %}
+                <div class="col-lg-4">
+                    <label>{% trans %}FPD{% endtrans %}</label><br>
+                    {{ form_widget(form.fpd) }}<br>
+                </div>
+            {% endif %}
+        </div>
         {{ form_end(form) }}
     </div>
 {% endblock %}
@@ -18,30 +150,36 @@
 {% block javascripts %}
     {{ parent() }}
     <script>
-        var pack = $('#kit_pack');
-        pack.change(function() {
-            $.ajax({
-                url : "{{ path('get_pack_models') }}",
-                type: 'POST',
-                dataType: "JSON",
-                data : {
-                    pack_id: pack.val()
-                },
-                success: function(tests) {
-                    var form = $("form[name='kit']");
-
-                    $("#added").remove();
-
-                    form.append('<div id="added"></div>');
-
-                    $.each(tests, function (key, test) {
-                        $("#added").append('' +
-                            '<label> ' + test.test_result + ' </label><br>' +
-                            '<input type="text" id="kit_' + test.test_result + '" name="kit[' + test.test_result + ']" required="required"><br>' +
-                        '');
-                    });
-                }
+        {% if created %}
+            Swal.fire({
+                icon: 'success',
+                title: 'Le kit a bien été créé',
+                showConfirmButton: false,
+                timer: 3000
+            })
+        {% endif %}
+        function choosePack() {
+            var pack = $('#kit_pack');
+            pack.change(function () {
+                var cli = $('#kit_cli').val();
+                var form = $(this).closest('form');
+                var data = {};
+                data[pack.attr('name')] = pack.val();
+                $.ajax({
+                    url: form.attr('action'),
+                    type: form.attr('method'),
+                    data: data,
+                    success: function (html) {
+                        $("#creation-form").html($(html).find("#creation-form"));
+                        $('#kit_cli').val(cli);
+                        choosePack();
+                    }
+                });
             });
+        }
+
+        $(document).ready(function () {
+            choosePack();
         });
     </script>
 {% endblock %}
