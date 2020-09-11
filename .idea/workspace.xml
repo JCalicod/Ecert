@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="25a17160-b568-49fc-99ec-ab72c3a6a895" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/KitService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/KitService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/security/create_kit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/create_kit.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/translations/messages.fr.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/translations/messages.fr.xlf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/translations/messages.fr.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/translations/messages.fr.yaml" afterDir="false" />
@@ -175,7 +174,7 @@
       <workItem from="1599552896552" duration="18931000" />
       <workItem from="1599638418221" duration="17372000" />
       <workItem from="1599723475516" duration="16319000" />
-      <workItem from="1599812385285" duration="1085000" />
+      <workItem from="1599812385285" duration="2626000" />
     </task>
     <servers />
   </component>
@@ -238,10 +237,10 @@
       <screen x="0" y="26" width="1920" height="1054" />
     </state>
     <state x="741" y="468" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.26.1920.1054/1920.141.1920.1080@0.26.1920.1054" timestamp="1599555349820" />
-    <state x="651" y="292" width="618" height="580" key="find.popup" timestamp="1599489122053">
+    <state x="651" y="292" width="618" height="580" key="find.popup" timestamp="1599814905001">
       <screen x="0" y="26" width="1920" height="1054" />
     </state>
-    <state x="651" y="292" width="618" height="580" key="find.popup/0.26.1920.1054/1920.141.1920.1080@0.26.1920.1054" timestamp="1599489122053" />
+    <state x="651" y="292" width="618" height="580" key="find.popup/0.26.1920.1054/1920.141.1920.1080@0.26.1920.1054" timestamp="1599814905001" />
     <state x="623" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1599483148295">
       <screen x="0" y="26" width="1920" height="1054" />
     </state>

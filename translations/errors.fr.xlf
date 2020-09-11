@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="VKDowX6" resname="Error">
+        <source>Error</source>
+        <target>Erreur</target>
+      </trans-unit>
+      <trans-unit id="ZARHwDv" resname="This pack doesn't exist.">
+        <source>This pack doesn't exist.</source>
+        <target>Ce jeu n'existe pas.</target>
+      </trans-unit>
+      <trans-unit id="sEek5rF" resname="This call is unauthorized.">
+        <source>This call is unauthorized.</source>
+        <target>Cet appel n'est pas autorisé.</target>
+      </trans-unit>
+      <trans-unit id="M1hR_35" resname="The form has errors.">
+        <source>The form has errors.</source>
+        <target>Le formulaire contient des erreurs.</target>
+      </trans-unit>
+      <trans-unit id="MD.THy7" resname="This pack doesn\'t exist.">
+        <source>This pack doesn\'t exist.</source>
+        <target>Ce jeu n'existe pas.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

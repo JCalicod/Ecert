@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="R8EGODn" resname="Fail quiet area 1DM">
+        <source>Fail quiet area 1DM</source>
+        <target>Fail quiet area 1DM</target>
+      </trans-unit>
+      <trans-unit id="s0Bg8pJ" resname="Pass quiet area 1DM">
+        <source>Pass quiet area 1DM</source>
+        <target>Pass quiet area 1DM</target>
+      </trans-unit>
+      <trans-unit id="vk0XBsS" resname="Default 1DM">
+        <source>Default 1DM</source>
+        <target>Default 1DM</target>
+      </trans-unit>
+      <trans-unit id="aWCxGhs" resname="Decodability 1DM">
+        <source>Decodability 1DM</source>
+        <target>Decodability 1DM</target>
+      </trans-unit>
+      <trans-unit id="_KvKUVG" resname="Contrast 1DM">
+        <source>Contrast 1DM</source>
+        <target>Contrast 1DM</target>
+      </trans-unit>
+      <trans-unit id="MntRBQy" resname="Fail quiet area 1DL">
+        <source>Fail quiet area 1DL</source>
+        <target>Fail quiet area 1DL</target>
+      </trans-unit>
+      <trans-unit id="Gn.cEDb" resname="Pass quiet area 1DL">
+        <source>Pass quiet area 1DL</source>
+        <target>Pass quiet area 1DL</target>
+      </trans-unit>
+      <trans-unit id="uW37bM3" resname="Default 1DL">
+        <source>Default 1DL</source>
+        <target>Default 1DL</target>
+      </trans-unit>
+      <trans-unit id="eBzxJJ0" resname="Decodability 1DL">
+        <source>Decodability 1DL</source>
+        <target>Decodability 1DL</target>
+      </trans-unit>
+      <trans-unit id="p6F8aD4" resname="Contrast 1DL">
+        <source>Contrast 1DL</source>
+        <target>Contrast 1DL</target>
+      </trans-unit>
+      <trans-unit id="18MkVkz" resname="Reset pixel size">
+        <source>Reset pixel size</source>
+        <target>Reset pixel size</target>
+      </trans-unit>
+      <trans-unit id="mL.ppra" resname="X - Dim">
+        <source>X - Dim</source>
+        <target>X - Dim</target>
+      </trans-unit>
+      <trans-unit id="3EXIQ0n" resname="Modulation">
+        <source>Modulation</source>
+        <target>Modulation</target>
+      </trans-unit>
+      <trans-unit id="C5btUvy" resname="ANU">
+        <source>ANU</source>
+        <target>ANU</target>
+      </trans-unit>
+      <trans-unit id="gngeJlB" resname="GNU">
+        <source>GNU</source>
+        <target>GNU</target>
+      </trans-unit>
+      <trans-unit id="9E8vi1R" resname="Contrast 2DM">
+        <source>Contrast 2DM</source>
+        <target>Contrast 2DM</target>
+      </trans-unit>
+      <trans-unit id="6EOjuBO" resname="Contrast Uniformity">
+        <source>Contrast Uniformity</source>
+        <target>Contrast Uniformity</target>
+      </trans-unit>
+      <trans-unit id="QxNDMYF" resname="UEC">
+        <source>UEC</source>
+        <target>UEC</target>
+      </trans-unit>
+      <trans-unit id="vWOdhw9" resname="FPD">
+        <source>FPD</source>
+        <target>FPD</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

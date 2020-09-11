@@ -10,27 +10,5 @@ Pack choice: Choix du jeu de cartes
 Cards: Cartes
 Select a pack: Choisissez un jeu
 Select a pack first: Choisissez d'abord un jeu
-This pack doesn\'t exist.: Ce jeu n'existe pas.
-This call is unauthorized.: Cet appel n'est pas autorisé.
-The form has errors.: Le formulaire contient des erreurs.
 CLI: CLI
-Fail quiet area 1DM: Fail quiet area 1DM
-Pass quiet area 1DM: Pass quiet area 1DM
-Default 1DM: Default 1DM
-Decodability 1DM: Decodability 1DM
-Contrast 1DM: Contrast 1DM
-Fail quiet area 1DL: Fail quiet area 1DL
-Pass quiet area 1DL: Pass quiet area 1DL
-Default 1DL: Default 1DL
-Decodability 1DL: Decodability 1DL
-Contrast 1DL: Contrast 1DL
-Reset pixel size: Reset pixel size
-X - Dim: X - Dim
-Modulation: Modulation
-ANU: ANU
-GNU: GNU
-Contrast 2DM: Contrast 2DM
-Contrast Uniformity: Contrast Uniformity
-UEC: UEC
-FPD: FPD
-Error: Erreur
+Kit has been created: Le kit a bien été créé
