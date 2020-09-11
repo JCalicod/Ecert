@@ -21,17 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="25a17160-b568-49fc-99ec-ab72c3a6a895" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Command/CreateCardTestCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/CreateCardTestCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/KitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/KitController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Kit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Kit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Test.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/Type/KitType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Type/KitType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/KitService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/KitService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/security/create_kit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/create_kit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/translations/messages.fr.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/translations/messages.fr.xlf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/translations/messages.fr.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/translations/messages.fr.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +174,8 @@
       <workItem from="1599548663407" duration="608000" />
       <workItem from="1599552896552" duration="18931000" />
       <workItem from="1599638418221" duration="17372000" />
-      <workItem from="1599723475516" duration="16238000" />
+      <workItem from="1599723475516" duration="16319000" />
+      <workItem from="1599812385285" duration="1085000" />
     </task>
     <servers />
   </component>

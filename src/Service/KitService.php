@@ -61,35 +61,39 @@ class KitService
      */
     public function createKit(array $data): void
     {
-        $today = new \DateTime('now', New \DateTimeZone('Europe/Paris'));
-        $kit = new Kit();
-        $kit->setCli($data['cli']->getData());
-        $kit->setPack($data['pack']->getData());
-        $kit->setCreation($today);
-        $kit->setState('Attribué');
-        $kit->setSerialNumber($this->generateSerialNumber($today));
-        $kit->setRandomKey($this->generateRandomKey());
+        if ($data['cli'] && $data['cli']->getData()) {
+            $today = new \DateTime('now', new \DateTimeZone('Europe/Paris'));
+            $kit = new Kit();
+            $kit->setCli($data['cli']->getData());
+            $kit->setPack($data['pack']->getData());
+            $kit->setCreation($today);
+            $kit->setState('Attribué');
+            $kit->setSerialNumber($this->generateSerialNumber($today));
+            $kit->setRandomKey($this->generateRandomKey());
 
-        $this->em->persist($kit);
+            $this->em->persist($kit);
 
-        foreach ($data as $key => $value) {
-            if (in_array($key, $this->getTestsFieldName())) {
-                if ($value && $value->getData()) {
-                    $kitValue = new KitValue();
-                    $kitValue->setKit($kit);
-                    $kitValue->setTest($this->em->getRepository(Test::class)->findOneBy(['field_name' => $key]));
-                    $kitValue->setValue($value->getData());
+            foreach ($data as $key => $value) {
+                if (in_array($key, $this->getTestsFieldName())) {
+                    if ($value && $value->getData()) {
+                        $kitValue = new KitValue();
+                        $kitValue->setKit($kit);
+                        $kitValue->setTest($this->em->getRepository(Test::class)->findOneBy(['field_name' => $key]));
+                        $kitValue->setValue($value->getData());
 
-                    $this->em->persist($kitValue);
-                }
-                else {
-                    $this->setError($this->translator->trans('The form has errors.'));
-                    return;
+                        $this->em->persist($kitValue);
+                    } else {
+                        $this->setError($this->translator->trans('The form has errors.'));
+                        return;
+                    }
                 }
             }
-        }
 
-        $this->em->flush();
+            $this->em->flush();
+        }
+        else {
+            $this->setError($this->translator->trans('The form has errors.'));
+        }
     }
 
     /**

@@ -158,6 +158,16 @@
                 timer: 3000
             })
         {% endif %}
+
+        {% for message in app.flashes('danger') %}
+            var msg = "{{ message }}";
+            Swal.fire({
+                icon: 'error',
+                title: "{{ 'Error'|trans }}",
+                text: msg
+            })
+        {% endfor %}
+
         function choosePack() {
             var pack = $('#kit_pack');
             pack.change(function () {
@@ -174,6 +184,16 @@
                         $('#kit_cli').val(cli);
                         choosePack();
                     }
+                })
+                .done(function (html) {
+                    $("#creation-form").html($(html).find("#creation-form"));
+                    $('#kit_cli').val(cli);
+                })
+                .fail(function (error) {
+
+                })
+                .always(function () {
+                    choosePack();
                 });
             });
         }

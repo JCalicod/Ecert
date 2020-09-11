@@ -41,9 +41,9 @@
         <source>Pack choice</source>
         <target>Choix du jeu de cartes</target>
       </trans-unit>
-      <trans-unit id="0X0teNd" resname="Models">
-        <source>Models</source>
-        <target>Modèles</target>
+      <trans-unit id="pS.LvDN" resname="Cards">
+        <source>Cards</source>
+        <target>Cartes</target>
       </trans-unit>
       <trans-unit id="PiHNM8e" resname="Select a pack">
         <source>Select a pack</source>
@@ -61,6 +61,94 @@
         <source>This call is unauthorized.</source>
         <target>Cet appel n'est pas autorisé.</target>
       </trans-unit>
+      <trans-unit id="M1hR_35" resname="The form has errors.">
+        <source>The form has errors.</source>
+        <target>Le formulaire contient des erreurs.</target>
+      </trans-unit>
+      <trans-unit id="51l5M0H" resname="CLI">
+        <source>CLI</source>
+        <target>__CLI</target>
+      </trans-unit>
+      <trans-unit id="R8EGODn" resname="Fail quiet area 1DM">
+        <source>Fail quiet area 1DM</source>
+        <target>__Fail quiet area 1DM</target>
+      </trans-unit>
+      <trans-unit id="s0Bg8pJ" resname="Pass quiet area 1DM">
+        <source>Pass quiet area 1DM</source>
+        <target>__Pass quiet area 1DM</target>
+      </trans-unit>
+      <trans-unit id="vk0XBsS" resname="Default 1DM">
+        <source>Default 1DM</source>
+        <target>__Default 1DM</target>
+      </trans-unit>
+      <trans-unit id="aWCxGhs" resname="Decodability 1DM">
+        <source>Decodability 1DM</source>
+        <target>__Decodability 1DM</target>
+      </trans-unit>
+      <trans-unit id="_KvKUVG" resname="Contrast 1DM">
+        <source>Contrast 1DM</source>
+        <target>__Contrast 1DM</target>
+      </trans-unit>
+      <trans-unit id="MntRBQy" resname="Fail quiet area 1DL">
+        <source>Fail quiet area 1DL</source>
+        <target>__Fail quiet area 1DL</target>
+      </trans-unit>
+      <trans-unit id="Gn.cEDb" resname="Pass quiet area 1DL">
+        <source>Pass quiet area 1DL</source>
+        <target>__Pass quiet area 1DL</target>
+      </trans-unit>
+      <trans-unit id="uW37bM3" resname="Default 1DL">
+        <source>Default 1DL</source>
+        <target>__Default 1DL</target>
+      </trans-unit>
+      <trans-unit id="eBzxJJ0" resname="Decodability 1DL">
+        <source>Decodability 1DL</source>
+        <target>__Decodability 1DL</target>
+      </trans-unit>
+      <trans-unit id="p6F8aD4" resname="Contrast 1DL">
+        <source>Contrast 1DL</source>
+        <target>__Contrast 1DL</target>
+      </trans-unit>
+      <trans-unit id="18MkVkz" resname="Reset pixel size">
+        <source>Reset pixel size</source>
+        <target>__Reset pixel size</target>
+      </trans-unit>
+      <trans-unit id="mL.ppra" resname="X - Dim">
+        <source>X - Dim</source>
+        <target>__X - Dim</target>
+      </trans-unit>
+      <trans-unit id="3EXIQ0n" resname="Modulation">
+        <source>Modulation</source>
+        <target>__Modulation</target>
+      </trans-unit>
+      <trans-unit id="C5btUvy" resname="ANU">
+        <source>ANU</source>
+        <target>__ANU</target>
+      </trans-unit>
+      <trans-unit id="gngeJlB" resname="GNU">
+        <source>GNU</source>
+        <target>__GNU</target>
+      </trans-unit>
+      <trans-unit id="9E8vi1R" resname="Contrast 2DM">
+        <source>Contrast 2DM</source>
+        <target>__Contrast 2DM</target>
+      </trans-unit>
+      <trans-unit id="6EOjuBO" resname="Contrast Uniformity">
+        <source>Contrast Uniformity</source>
+        <target>__Contrast Uniformity</target>
+      </trans-unit>
+      <trans-unit id="QxNDMYF" resname="UEC">
+        <source>UEC</source>
+        <target>__UEC</target>
+      </trans-unit>
+      <trans-unit id="vWOdhw9" resname="FPD">
+        <source>FPD</source>
+        <target>__FPD</target>
+      </trans-unit>
+      <trans-unit id="0X0teNd" resname="Models">
+        <source>Models</source>
+        <target>Modèles</target>
+      </trans-unit>
       <trans-unit id="ZARHwDv" resname="This pack doesn't exist.">
         <source>This pack doesn't exist.</source>
         <target>__This pack doesn't exist.</target>
@@ -68,6 +156,10 @@
       <trans-unit id="Zv0w_Fl" resname="Select a pack first..">
         <source>Select a pack first..</source>
         <target>__Select a pack first..</target>
+      </trans-unit>
+      <trans-unit id="yT2BaeP" resname="This pack doesn't have a configured set.">
+        <source>This pack doesn't have a configured set.</source>
+        <target>__This pack doesn't have a configured set.</target>
       </trans-unit>
     </body>
   </file>
