@@ -156,7 +156,9 @@
                 title: "{{ 'Kit has been created'|trans }}",
                 showConfirmButton: false,
                 timer: 3000
-            })
+            }).then(function() {
+                window.location = "{{ path('security_home') }}";
+            });
         {% endif %}
 
         {% for message in app.flashes('danger') %}
