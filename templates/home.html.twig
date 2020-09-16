@@ -1,5 +1,39 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {% trans %}Welcome{% endtrans %}
+    <h1>{% trans %}Welcome to your E-cert portal{% endtrans %}</h1>
+    <hr>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h2>This is a title</h2>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto atque autem consectetur cum dolorem dolorum, ducimus eius facere id illum libero, nobis officiis quae quis quos repudiandae velit voluptatibus.</p>
+        </div>
+    </div>
+
+    <form method="post">
+        {% if error %}
+            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+        <h2 class="h3 mb-3 font-weight-normal">{% trans %}Please enter your E-cert credentials{% endtrans %}</h2>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <label for="inputSerial_number">{% trans %}Serial Number{% endtrans %}</label>
+                <input type="text" value="{{ last_username }}" name="serial_number" id="inputSerial_number" class="form-control" required autofocus>
+            </div>
+            <div class="col-lg-6">
+                <label for="inputKey">{% trans %}Secret Key{% endtrans %}</label>
+                <input type="text" name="random_key" id="inputKey" class="form-control" required>
+            </div>
+        </div>
+
+        <input type="hidden" name="_csrf_token"
+               value="{{ csrf_token('authenticate') }}"
+        >
+
+        <button class="mt-3 btn btn-success" type="submit">
+            {% trans %}Access my E-cert space{% endtrans %}
+        </button>
+    </form>
 {% endblock %}

@@ -10,11 +10,27 @@ security:
             entity:
                 class: App\Entity\User
                 property: username
+        app_kit_provider:
+            entity:
+                class: App\Entity\Kit
+                property: serial_number
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
+        ecert:
+            pattern: ^/(en|fr)/
+            anonymous: lazy
+            provider: app_kit_provider
+            guard:
+                authenticators:
+                    - App\Security\EcertAuthenticator
+            logout:
+                path: ecert_logout
+                target: ecert_login
+                invalidate_session: false
         main:
+            pattern: ^/(en|fr)/security/
             anonymous: lazy
             provider: app_user_provider
             guard:
@@ -22,8 +38,9 @@ security:
                     - App\Security\LoginFormAuthenticator
             logout:
                 path: app_logout
-                # where to redirect after logout
-                target: home
+                target: security_home
+                invalidate_session: false
+
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication

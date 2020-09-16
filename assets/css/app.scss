@@ -109,7 +109,7 @@ label {
     text-decoration: none;
 }
 
-.creation-form label {
+label {
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 20px;
@@ -121,4 +121,8 @@ label {
 
 .creation-form input[type="text"]:disabled {
     cursor: not-allowed;
+}
+
+.jumbotron {
+    padding: 2rem 2rem;
 }

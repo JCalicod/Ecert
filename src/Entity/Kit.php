@@ -6,11 +6,12 @@ use App\Repository\KitRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=KitRepository::class)
  */
-class Kit
+class Kit implements UserInterface
 {
     /**
      * @ORM\Id
@@ -166,5 +167,30 @@ class Kit
         }
 
         return $this;
+    }
+
+    public function getRoles()
+    {
+        $roles[] = 'ROLE_ECERT';
+
+        return array_unique($roles);
+    }
+
+    public function getPassword()
+    {
+        return (string) $this->random_key;
+    }
+
+    public function getSalt()
+    {
+    }
+
+    public function getUsername()
+    {
+        return (string) $this->serial_number;
+    }
+
+    public function eraseCredentials()
+    {
     }
 }
