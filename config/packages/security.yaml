@@ -18,6 +18,16 @@ security:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
+        main:
+            pattern: ^/(en|fr)/(security|securite|kit)/
+            anonymous: lazy
+            provider: app_user_provider
+            guard:
+                authenticators:
+                    - App\Security\LoginFormAuthenticator
+            logout:
+                path: app_logout
+                target: security_home
         ecert:
             pattern: ^/(en|fr)/
             anonymous: lazy
@@ -28,18 +38,6 @@ security:
             logout:
                 path: ecert_logout
                 target: ecert_login
-                invalidate_session: false
-        main:
-            pattern: ^/(en|fr)/security/
-            anonymous: lazy
-            provider: app_user_provider
-            guard:
-                authenticators:
-                    - App\Security\LoginFormAuthenticator
-            logout:
-                path: app_logout
-                target: security_home
-                invalidate_session: false
 
 
             # activate different ways to authenticate

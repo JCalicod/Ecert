@@ -58,11 +58,13 @@ class SecurityController extends AbstractController
      *     "en": "/home",
      *     "fr": "/accueil"
      * }, name="security_home")
-     * @IsGranted("ROLE_ADMIN")
      * @return Response
      */
     public function home()
     {
-        return $this->render('security/home.html.twig', []);
+        if ($this->getUser() && $this->getUser()->getRoles() && in_array('ROLE_ADMIN', $this->getUser()->getRoles())) {
+            return $this->render('security/home.html.twig', []);
+        }
+        return $this->redirectToRoute('app_login');
     }
 }

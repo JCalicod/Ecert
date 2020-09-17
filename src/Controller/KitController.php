@@ -10,6 +10,9 @@ use App\Entity\Set;
 use App\Form\Type\KitType;
 use App\Service\KitService;
 use Doctrine\ORM\EntityManagerInterface;
+use Omines\DataTablesBundle\Adapter\Doctrine\ORMAdapter;
+use Omines\DataTablesBundle\Column\TextColumn;
+use Omines\DataTablesBundle\DataTableFactory;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -26,6 +29,7 @@ use Symfony\Contracts\Translation\TranslatorInterface;
  *     "en": "/kit",
  *     "fr": "/kit"
  * })
+ * @IsGranted("ROLE_ADMIN")
  */
 class KitController extends AbstractController
 {
@@ -42,7 +46,6 @@ class KitController extends AbstractController
 
     /**
      * @Route("/", name="create_kit")
-     * @IsGranted("ROLE_ADMIN")
      * @return Response
      * @throws \Exception
      */
@@ -107,5 +110,34 @@ class KitController extends AbstractController
         else {
             return new JsonResponse($this->translator->trans('This call is unauthorized.'), JsonResponse::HTTP_UNAUTHORIZED);
         }
+    }
+
+    /**
+     * @Route({
+     *     "en": "/list",
+     *     "fr": "/liste"
+     * }, name="kit_list")
+     */
+    public function kitList(Request $request, DataTableFactory $dataTableFactory)
+    {
+        $kits = $this->em->getRepository(Kit::class)->findAll();
+
+        $table = $dataTableFactory->create()
+            ->add('serial_number', TextColumn::class, ['label' => $this->translator->trans('Serial Number')])
+            ->add('random_key', TextColumn::class, ['label' => $this->translator->trans('Random Key')])
+            ->add('cli', TextColumn::class, ['label' => $this->translator->trans('CLI')])
+            ->add('state', TextColumn::class, ['label' => $this->translator->trans('State')])
+            ->createAdapter(ORMAdapter::class, [
+                'entity' => Kit::class
+            ])
+        ->handleRequest($request);
+
+        if ($table->isCallback()) {
+            return $table->getResponse();
+        }
+
+        return $this->render('security/kit_list.html.twig', [
+            'datatable' => $table
+        ]);
     }
 }

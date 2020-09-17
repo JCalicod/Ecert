@@ -5,6 +5,7 @@
         <title>{% block title %}Axicon E-cert{% endblock %}</title>
         <link rel="icon" type="image/png" href="{{ asset('img/icon.png') }}">
         {% block stylesheets %}
+            <link rel="stylesheet" type="text/css" href="https:////cdn.datatables.net/1.10.21/css/jquery.dataTables.css"/>
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
     </head>
@@ -35,8 +36,10 @@
         </div>
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+            <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+            <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+            <script src="{{ asset('bundles/datatables/js/datatables.js') }}"></script>
         {% endblock %}
     </body>
 </html>

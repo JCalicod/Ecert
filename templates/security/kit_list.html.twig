@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>{% trans %}List of Kits{% endtrans %}</h1>
+    <hr>
+    <div id="kits">
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script>
+    $(function() {
+        $('#kits').initDataTables({{ datatable_settings(datatable) }});
+    });
+    </script>
+{% endblock %}

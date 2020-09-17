@@ -19,7 +19,7 @@ class HomeController extends AbstractController
 {
     /**
      * @Route("/ecert", name="ecert")
-     * @IsGranted("IS_AUTHENTICATED_FULLY")
+     * @IsGranted("ROLE_ECERT")
      */
     public function ecert()
     {

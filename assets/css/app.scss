@@ -126,3 +126,18 @@ label {
 .jumbotron {
     padding: 2rem 2rem;
 }
+
+// Datatables
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    border: 0 !important;
+    background: none !important;
+    color: #5eb5e0 !important;
+    font-weight: bold !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: none !important;
+    color: #5eb5e0 !important;
+    font-weight: bold !important;
+    border: 0 !important;
+}

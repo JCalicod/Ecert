@@ -20,15 +20,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25a17160-b568-49fc-99ec-ab72c3a6a895" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Ecert.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Ecert.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/KitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/KitController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Kit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Kit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/home.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/translations/messages.fr.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/translations/messages.fr.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +156,7 @@
       <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/vendor/webimpress/safe-writer" />
       <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
+      <path value="$PROJECT_DIR$/vendor/omines/datatables-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hB33Hnt0RgdkUAm955cZTcNJu6" />
@@ -156,6 +168,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Atlas" />
+    <property name="nodejs_package_manager_path" value="yarn" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -184,7 +197,10 @@
       <workItem from="1600068420364" duration="5039000" />
       <workItem from="1600155847070" duration="9301000" />
       <workItem from="1600177338486" duration="5492000" />
-      <workItem from="1600240487919" duration="6920000" />
+      <workItem from="1600240487919" duration="7223000" />
+      <workItem from="1600260354285" duration="6000" />
+      <workItem from="1600260520181" duration="2303000" />
+      <workItem from="1600335927439" duration="11291000" />
     </task>
     <servers />
   </component>
@@ -218,10 +234,10 @@
       <screen x="0" y="26" width="1920" height="1054" />
     </state>
     <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.26.1920.1054/1920.141.1920.1080@0.26.1920.1054" timestamp="1599555740117" />
-    <state x="749" y="234" width="412" height="659" key="#com.intellij.ide.util.MemberChooser" timestamp="1600249555266">
+    <state x="749" y="234" width="412" height="659" key="#com.intellij.ide.util.MemberChooser" timestamp="1600262383433">
       <screen x="0" y="26" width="1920" height="1054" />
     </state>
-    <state x="749" y="234" width="412" height="659" key="#com.intellij.ide.util.MemberChooser/0.26.1920.1054/1920.141.1920.1080@0.26.1920.1054" timestamp="1600249555266" />
+    <state x="749" y="234" width="412" height="659" key="#com.intellij.ide.util.MemberChooser/0.26.1920.1054/1920.141.1920.1080@0.26.1920.1054" timestamp="1600262383433" />
     <state x="693" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600249417083">
       <screen x="0" y="26" width="1920" height="1054" />
     </state>
@@ -230,10 +246,10 @@
       <screen x="0" y="26" width="1920" height="1054" />
     </state>
     <state x="100" y="126" width="1720" height="854" key="DiffContextDialog/0.26.1920.1054/1920.141.1920.1080@0.26.1920.1054" timestamp="1599733375058" />
-    <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1600157181067">
+    <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1600343596288">
       <screen x="0" y="26" width="1920" height="1054" />
     </state>
-    <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl/0.26.1920.1054/1920.141.1920.1080@0.26.1920.1054" timestamp="1600157181067" />
+    <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl/0.26.1920.1054/1920.141.1920.1080@0.26.1920.1054" timestamp="1600343596288" />
     <state x="73" y="277" width="713" height="555" key="NewPhpClassDialog" timestamp="1600075535449">
       <screen x="0" y="26" width="1920" height="1054" />
     </state>
@@ -247,14 +263,14 @@
       <screen x="0" y="26" width="1920" height="1054" />
     </state>
     <state x="100" y="126" width="1720" height="854" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.26.1920.1054/1920.141.1920.1080@0.26.1920.1054" timestamp="1600177557533" />
-    <state x="741" y="468" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600174631818">
+    <state x="741" y="468" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600350967877">
       <screen x="0" y="26" width="1920" height="1054" />
     </state>
-    <state x="741" y="468" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.26.1920.1054/1920.141.1920.1080@0.26.1920.1054" timestamp="1600174631818" />
-    <state x="1094" y="317" width="764" height="580" key="find.popup" timestamp="1600182209438">
+    <state x="741" y="468" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.26.1920.1054/1920.141.1920.1080@0.26.1920.1054" timestamp="1600350967877" />
+    <state x="1094" y="317" width="764" height="580" key="find.popup" timestamp="1600261515573">
       <screen x="0" y="26" width="1920" height="1054" />
     </state>
-    <state x="1094" y="317" width="764" height="580" key="find.popup/0.26.1920.1054/1920.141.1920.1080@0.26.1920.1054" timestamp="1600182209438" />
+    <state x="1094" y="317" width="764" height="580" key="find.popup/0.26.1920.1054/1920.141.1920.1080@0.26.1920.1054" timestamp="1600261515573" />
     <state x="623" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1599483148295">
       <screen x="0" y="26" width="1920" height="1054" />
     </state>
